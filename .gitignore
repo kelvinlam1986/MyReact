@@ -364,3 +364,5 @@ FodyWeavers.xsd
 /API/appsettings.json
 /API/myreact.db
 /API/myreact.db-shm
+/API/myreact.db-wal
+/client/.env.development
