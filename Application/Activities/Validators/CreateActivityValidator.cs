@@ -8,7 +8,7 @@ namespace Application.Activities.Validators
         public CreateActivityValidator()
         {
             RuleFor(x => x.ActivityDto.Title).NotEmpty().WithMessage("Title is required");
-            RuleFor(x => x.ActivityDto.Title).NotEmpty().WithMessage("Description is required");
+            RuleFor(x => x.ActivityDto.Description).NotEmpty().WithMessage("Description is required");
         }
     }
 }
