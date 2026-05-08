@@ -3,17 +3,20 @@ using FluentValidation;
 
 namespace Application.Activities.Validators
 {
-    public class CreateActivityValidator : AbstractValidator<CreateActivity.Command>
+    public class EditActivityValidator : AbstractValidator<EditActivity.Command>
     {
-        public CreateActivityValidator()
+        public EditActivityValidator()
         {
+            RuleFor(x => x.ActivityDto.Id)
+                .NotEmpty().WithMessage("Id is required");
+
             RuleFor(x => x.ActivityDto.Title)
-                .NotEmpty().WithMessage("Title is required")
-                .MaximumLength(100).WithMessage("Title must not exceed 100 characters");
+               .NotEmpty().WithMessage("Title is required")
+               .MaximumLength(100).WithMessage("Title must not exceed 100 characters");
 
             RuleFor(x => x.ActivityDto.Description)
                 .NotEmpty().WithMessage("Description is required");
-            
+
             RuleFor(x => x.ActivityDto.Date)
                 .GreaterThan(DateTime.UtcNow).WithMessage("Date must be in future");
 
