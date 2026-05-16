@@ -5,7 +5,7 @@ import ActivityDashboard from "../../features/activities/dashboard/ActivityDashb
 import ActivityForm from "../../features/activities/form/ActivityForm";
 import ActivityDetailPage from "../../features/activities/details/ActivityDetailPage";
 import Counter from "../../features/counter/Counter";
-import TestErrors from "../../features/errors/testError";
+import TestErrors from "../../features/errors/TestError";
 import NotFound from "../../features/errors/NotFound";
 import ServerError from "../../features/errors/ServerError";
 
